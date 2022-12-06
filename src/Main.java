@@ -6,6 +6,7 @@ public class Main {
         task4();
         task5();
         task6();
+        task7();
 
     }
 
@@ -81,8 +82,39 @@ public class Main {
     public static void task6 () {
         System.out.println("Задача 6");
 
-        int total = 102;
+        int capacity = 102;
+        int seatPlace = 61;
+        int standingPlace = 41;
 
+        boolean freePlaceNot = (seatPlace + standingPlace) > 102;
+        boolean freePlaceYes = (seatPlace + standingPlace) <= 102;
+
+        if (capacity <= 102 && freePlaceYes) {
+            System.out.println("Места в вагоне есть");
+        } if(capacity <= 102 && freePlaceYes && seatPlace <= 60) {
+            System.out.println("Ваше место сидячее");
+        } if (capacity <= 102 && freePlaceYes && seatPlace > 60 && standingPlace <= 42){
+            System.out.println("Ваше место стоячее");
+        } else if (capacity >= 102 && freePlaceNot) {
+            System.out.println("Мест нет");
+        }
+
+    }
+
+    public static void task7 () {
+        System.out.println("Задача 7");
+
+        int one = 106;
+        int two = 105;
+        int three = 1;
+
+        if (one > two && one > three) {
+            System.out.println(one + " больше чем " + two + " и " + three);
+        } else if ( two > one && two > three) {
+            System.out.println(two + " больше чем " + one + " и " + three);
+        } else {
+            System.out.println(three + " больше чем " + one + " и " + two);
+        }
     }
 
 }

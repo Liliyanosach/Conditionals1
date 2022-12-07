@@ -1,2 +1,4 @@
 # Project exclude paths
 /out/
+/Conditionals1.iml
+/.idea/
